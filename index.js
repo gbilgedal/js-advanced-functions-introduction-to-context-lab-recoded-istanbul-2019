@@ -54,9 +54,9 @@ function createTimeInEvent(employee, dateInfo){
 }
 
 function hoursWorkedOnDate(employee, date){
-  for (let i = 0; i < obj.timeInEvents.length; i++) {
-         if (obj.timeInEvents[i].date == date && obj.timeOutEvents[i].date == date) {
-           return (obj.timeOutEvents[i].hour- obj.timeInEvents[i].hour)/100
+  for (let i = 0; i < employee.timeInEvents.length; i++) {
+         if (employee.timeInEvents[i].date === date && employee.timeOutEvents[i].date === date) {
+           return (employee.timeOutEvents[i].hour - employee.timeInEvents[i].hour)/100
          }
      }
 
