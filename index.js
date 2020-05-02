@@ -19,14 +19,14 @@ function createEmployeeRecords(employees){
   return emplo;
 }
 
-function createTimeInEvent(employee, date){
-  date = date.split(" ");
+function createTimeInEvent(employee, dateInfo){
+  let date = dateInfo.split(" ");
   let time = date[1];
-  let hour = Integer.parseInt(time)%100;
-  let minutes = Integer.parseInt(time)-hour;
+  let hour = parseInt(time)%100;
+  let minutes = parseInt(time)-hour;
 let recordObject = {
   type: "TimeIn",
-  hour: date[1],
+  hour: parseInt(time),
   date: date[0],
 };
   //console.log(recordObject);
