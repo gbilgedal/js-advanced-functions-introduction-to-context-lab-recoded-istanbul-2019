@@ -31,7 +31,7 @@ let recordObject = {
 };
   //console.log(recordObject);
   employee.timeInEvents.push(recordObject);
-  
+
 
   return employee;
 }
