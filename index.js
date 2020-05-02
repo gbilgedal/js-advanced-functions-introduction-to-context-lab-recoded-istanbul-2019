@@ -20,6 +20,18 @@ function createEmployeeRecords(employees){
 }
 
 function createTimeInEvent(employee, date){
+  date = date.split(" ");
+  let time = date[1];
+  let hour = Integer.parseInt(time)%100;
+  let minutes = Integer.parseInt(time)-hour;
+let recordObject = {
+  type: "TimeIn",
+  hour: date[1],
+  date: date[0],
+};
+  //console.log(recordObject);
+  employee.timeInEvents.push(recordObject);
+  
 
-
+  return employee;
 }
