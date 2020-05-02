@@ -35,7 +35,7 @@ function createTimeInEvent(employee, dateInfo){
   return employee;
 }
 
-function createTimeInEvent(employee, dateInfo){
+function createTimeOutEvent(employee, dateInfo){
   let date = dateInfo.split(" ");
   let time = date[1];
   let hour = parseInt(time)%100;
