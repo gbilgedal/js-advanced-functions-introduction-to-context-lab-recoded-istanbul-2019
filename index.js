@@ -69,4 +69,3 @@ function allWagesFor(employee){
     sum += wagesEarnedOnDate(employee, employee.timeInEvents[i].date)
   }
 }
-
