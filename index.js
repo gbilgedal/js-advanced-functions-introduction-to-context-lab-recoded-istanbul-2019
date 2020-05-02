@@ -24,14 +24,32 @@ function createTimeInEvent(employee, dateInfo){
   let time = date[1];
   let hour = parseInt(time)%100;
   let minutes = parseInt(time)-hour;
-let recordObject = {
-  type: "TimeIn",
-  hour: parseInt(time),
-  date: date[0],
-};
-  //console.log(recordObject);
+  let recordObject = {
+    type: "TimeIn",
+    hour: parseInt(time),
+    date: date[0],
+  };
+
   employee.timeInEvents.push(recordObject);
 
 
   return employee;
 }
+
+function createTimeInEvent(employee, dateInfo){
+  let date = dateInfo.split(" ");
+  let time = date[1];
+  let hour = parseInt(time)%100;
+  let minutes = parseInt(time)-hour;
+  let recordObject = {
+    type: "TimeOut",
+    hour: parseInt(time),
+    date: date[0],
+  };
+
+  employee.timeInEvents.push(recordObject);
+
+
+  return employee;
+}
+
