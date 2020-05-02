@@ -72,10 +72,11 @@ function allWagesFor(employee){
 }
 function findEmployeeByFirstName(srcArray, firstName){
   for(let i = 0; i < srcArray.length; i++){
-    if(srcArray[i].name === firstName){
+    if(srcArray[i].firstName === firstName){
       return srcArray[i];
     }
   }
+  return undefined;
 }
 function calculatePayroll(srcArray){
   let sum = 0;
