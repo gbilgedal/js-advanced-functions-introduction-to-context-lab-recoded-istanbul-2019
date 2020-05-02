@@ -70,3 +70,10 @@ function allWagesFor(employee){
   }
   return sum;
 }
+function findEmployeeByFirstName(srcArray, firstName){
+  for(let i = 0; i < srcArray.length; i++){
+    if(srcArray[i].name === firstName){
+      return srcArray[i];
+    }
+  }
+}
