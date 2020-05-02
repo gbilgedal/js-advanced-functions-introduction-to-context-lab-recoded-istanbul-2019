@@ -52,4 +52,3 @@ function createTimeInEvent(employee, dateInfo){
 
   return employee;
 }
-
