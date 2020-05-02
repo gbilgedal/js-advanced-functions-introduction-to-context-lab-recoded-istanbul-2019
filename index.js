@@ -66,6 +66,7 @@ function wagesEarnedOnDate(employee, date) {
 function allWagesFor(employee){
   let sum = 0;
   for(let i = 0; i < employee.timeInEvents.length; i++){
-    sum += wagesEarnedOnDate(employee, employee.timeInEvents[i].date)
+    sum += wagesEarnedOnDate(employee, employee.timeInEvents[i].date);
   }
+  return sum;
 }
