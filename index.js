@@ -59,5 +59,5 @@ function hoursWorkedOnDate(employee, date){
            return (obj.timeOutEvents[i].hour- obj.timeInEvents[i].hour)/100
          }
      }
-  
+
 }
