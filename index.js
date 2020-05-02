@@ -83,5 +83,5 @@ function calculatePayroll(srcArray){
     sum += allWagesFor(srcArray[i]);
   }
   return sum
-  
+
 }
