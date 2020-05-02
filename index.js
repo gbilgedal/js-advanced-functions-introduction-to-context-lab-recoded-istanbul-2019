@@ -32,7 +32,6 @@ function createTimeInEvent(employee, dateInfo){
 
   employee.timeInEvents.push(recordObject);
 
-
   return employee;
 }
 
@@ -49,7 +48,6 @@ function createTimeInEvent(employee, dateInfo){
 
   employee.timeInEvents.push(recordObject);
 
-
   return employee;
 }
 
@@ -61,3 +59,14 @@ function hoursWorkedOnDate(employee, date){
      }
 
 }
+function wagesEarnedOnDate(employee, date) {
+  let hours = hoursWorkedOnDate(employee, date);
+  return hours * employee.payPerHour;
+}
+function allWagesFor(employee){
+  let sum = 0;
+  for(let i = 0; i < employee.timeInEvents.length; i++){
+    sum += wagesEarnedOnDate(employee, employee.timeInEvents[i].date)
+  }
+}
+
