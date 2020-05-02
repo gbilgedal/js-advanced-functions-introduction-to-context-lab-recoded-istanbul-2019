@@ -30,7 +30,7 @@ function createTimeInEvent(employee, dateInfo){
     date: date[0],
   };
 
-  employee.timeOutEvents.push(recordObject);
+  employee.timeInEvents.push(recordObject);
 
   return employee;
 }
@@ -46,7 +46,7 @@ function createTimeOutEvent(employee, dateInfo){
     date: date[0],
   };
 
-  employee.timeInEvents.push(recordObject);
+  employee.timeOutEvents.push(recordObject);
 
   return employee;
 }
