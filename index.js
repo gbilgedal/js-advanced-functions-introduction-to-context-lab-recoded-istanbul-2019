@@ -81,8 +81,10 @@ function findEmployeeByFirstName(srcArray, firstName){
 function calculatePayroll(srcArray){
   let sum = 0;
   for(let i = 0; i < srcArray.length; i++){
-    sum += allWagesFor(srcArray[i]);
+    for(let j = 0; j < srcArray[i].timeInEvents.length; j++){
+      sum += wagesEarnedOnDate(employee, employee.timeInEvents[j].date);
+    }
   }
-  return sum
+  return sum;
 
 }
